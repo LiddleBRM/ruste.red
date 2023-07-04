@@ -11,7 +11,6 @@ import {
 } from "./styled/ButtonAreaStyle";
 import { ContactMeansRow, DetailColumnSP } from "./contact/ContactStyled";
 
-// TODO 条件分岐を追加する
 function Index() {
   const [checked, setChecked] = useState(1);
   const [acceptSpSite, setAcceptSpSite] = useState(false);

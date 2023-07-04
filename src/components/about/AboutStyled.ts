@@ -4,8 +4,6 @@ const BG_COLOR_PRIMAL = "#000000"; // 黒
 const TEXT_COLOR_PRIMAL = "#00793D"; // 黒
 // TODO こいつらconstに移動したいね
 
-// TODO 案内動画を載せておく
-
 export const AboutArea = styled.div({
   alignItems: "left",
   display: "flex",

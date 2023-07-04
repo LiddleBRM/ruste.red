@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const BG_COLOR_PRIMAL = "#000000"; // 黒
 const TEXT_COLOR_PRIMAL = "#00793D"; // 黒
-// TODO こいつらconstに移動したいね
 
 export const ContactArea = styled.div({
   alignItems: "center",
