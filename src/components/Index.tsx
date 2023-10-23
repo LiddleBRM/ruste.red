@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import About from "./about/About";
 import Contact from "./contact/Contact";
 import Links from "./links/Links";
-import Profile from "./profile/Profile";
 import { MainBody, NameHeader } from "./styled/Styled";
 import {
   ButtonArea,
