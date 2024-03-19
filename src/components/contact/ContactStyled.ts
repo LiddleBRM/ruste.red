@@ -41,7 +41,7 @@ export const DetailColumn = styled.div({
   width: "50vw",
   alignItems: "center",
   justifyContent: "center",
-  color: theme.colors.text.lmSecondary,
+  color: theme.colors.text.lmPrimary,
   "@media screen and (max-width: 820px)": {
     display: "none",
   },
