@@ -76,7 +76,6 @@ function Index() {
           <MainBody>
             <br />
             {checked == 1 && <About />}
-            {/*checked == 2 && <Profile /> */}
             {checked == 2 && <Links />}
             {checked == 3 && <Contact />}
           </MainBody>

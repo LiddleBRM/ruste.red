@@ -22,15 +22,10 @@ function Links() {
         {LinksData.map((row, index) => (
           <>
             {linkDetail == index && (
-              <LinksRowSelected onClick={() => clickCategory(index)}>
-                {row.key}
-              </LinksRowSelected>
-            )}
-            {linkDetail != index && (
               <>
-                <LinksRow onClick={() => clickCategory(index)}>
+                <LinksRowSelected onClick={() => clickCategory(index)}>
                   {row.key}
-                </LinksRow>
+                </LinksRowSelected>
                 <DetailColumnSP>
                   {LinksData[linkDetail].detail.map((row) => (
                     <DetailRow
@@ -40,6 +35,13 @@ function Links() {
                     </DetailRow>
                   ))}
                 </DetailColumnSP>
+              </>
+            )}
+            {linkDetail != index && (
+              <>
+                <LinksRow onClick={() => clickCategory(index)}>
+                  {row.key}
+                </LinksRow>
               </>
             )}
           </>

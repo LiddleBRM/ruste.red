@@ -20,7 +20,7 @@ export const ProfileTable = styled.div({});
 
 export const ProfileTableRow = styled.div({
   display: "flex",
-  height: "40px",
+  minHeight: "40px",
   // width: "100%",
 });
 
