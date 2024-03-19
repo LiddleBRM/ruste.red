@@ -1,7 +1,5 @@
 import styled from "styled-components";
-
-const BG_COLOR_PRIMAL = "#000000"; // 黒
-const TEXT_COLOR_PRIMAL = "#00793D"; // 黒
+import theme from "../theme";
 
 export const LinksArea = styled.div({
   alignItems: "center",
@@ -15,7 +13,7 @@ export const LinksColumn = styled.div({
   justifyContent: "center",
   textAlign: "center",
   //fontSize: "calc(10px + 2vmin)",
-  color: TEXT_COLOR_PRIMAL,
+  color: theme.colors.text.lmPrimary,
   "@media screen and (max-width: 820px)": {
     width: "100%",
   },
@@ -30,8 +28,8 @@ export const LinksRow = styled.div({
 });
 
 export const LinksRowSelected = styled.div({
-  background: TEXT_COLOR_PRIMAL,
-  color: BG_COLOR_PRIMAL,
+  background: theme.colors.button.lmPrimarySelected,
+  color: theme.colors.text.lmSecondary,
   display: "flex",
   flexDirection: "column",
   height: "40px",
@@ -44,7 +42,7 @@ export const DetailColumn = styled.div({
   alignItems: "center",
   justifyContent: "center",
   //fontSize: "calc(10px + 2vmin)",
-  color: TEXT_COLOR_PRIMAL,
+  color: theme.colors.text.lmPrimary,
   "@media screen and (max-width: 820px)": {
     display: "none",
   },
@@ -54,8 +52,8 @@ export const DetailColumnSP = styled.div({
   display: "none",
   wordBreak: "break-all",
   "@media screen and (max-width: 820px)": {
-    background: TEXT_COLOR_PRIMAL,
-    color: BG_COLOR_PRIMAL,
+    background: theme.colors.button.lmPrimarySelected, // これもボタンカラーみたいなの作る
+    color: theme.colors.text.lmSecondary,
     display: "flex",
     width: "100vw", // スマホの時は100%
     // display: "flex",

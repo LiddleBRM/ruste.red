@@ -1,20 +1,18 @@
 import styled from "styled-components";
-
-const BG_COLOR_PRIMAL = "#000000"; // 黒
-const TEXT_COLOR_PRIMAL = "#00793D"; // 黒
+import theme from "../theme";
 
 export const ButtonArea = styled.div({
-  backgroundColor: BG_COLOR_PRIMAL,
+  backgroundColor: theme.colors.button.lmPrimary,
   height: "120px",
   alignItems: "center",
   justifyContent: "center",
   fontSize: "calc(10px + 2vmin)",
-  color: TEXT_COLOR_PRIMAL,
+  color: theme.colors.text.lmPrimary,
 });
 
 export const CategoryTab = styled.button({
-  backgroundColor: BG_COLOR_PRIMAL,
-  color: TEXT_COLOR_PRIMAL,
+  backgroundColor: theme.colors.button.lmPrimary,
+  color: theme.colors.text.lmPrimary,
   border: "none",
   width: "30vw",
   fontSize: "34px",
@@ -25,8 +23,8 @@ export const CategoryTab = styled.button({
 });
 
 export const CategoryTabSelected = styled.button({
-  backgroundColor: TEXT_COLOR_PRIMAL,
-  color: BG_COLOR_PRIMAL,
+  backgroundColor: theme.colors.button.lmPrimarySelected,
+  color: theme.colors.text.lmSecondary,
   border: "none",
   width: "30vw",
   fontSize: "34px",
