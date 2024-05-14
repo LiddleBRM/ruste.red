@@ -1,6 +1,6 @@
 export default function checkQuery() {
   // URLの形式 : example.com?showDescription=true&archivePage=338
-  const params = new URLSearchParams(location.search);
+  const params = new URLSearchParams(window.location.search);
 
   switch (params.get("showDescription")) {
     case "true":
