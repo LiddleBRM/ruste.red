@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import theme from "../theme";
 
 const BG_COLOR_PRIMAL = "#000000"; // 黒
-const TEXT_COLOR_PRIMAL = "#00793D"; // 黒
 
 export const Background = styled.div({
   textAlign: "center",
@@ -17,7 +17,7 @@ export const AppHeader = styled.header({
   alignItems: "center",
   justifyContent: "center",
   fontSize: "calc(10px + 2vmin)",
-  color: TEXT_COLOR_PRIMAL,
+  color: theme.colors.text.lmPrimary,
 });
 
 export const NameHeader = styled.header({
@@ -28,8 +28,16 @@ export const NameHeader = styled.header({
   alignItems: "center",
   justifyContent: "center",
   fontSize: "42px",
-  color: TEXT_COLOR_PRIMAL,
+  color: theme.colors.text.lmPrimary,
   // TODO スマホの時の高さとフォントサイズを変更
+});
+
+export const NameheaderDesc = styled.div({
+  display: "flex",
+  minHeight: "40px",
+  margin: "30px 0px",
+  justifyContent: "center",
+  fontSize: "20px",
 });
 
 export const MainBody = styled.header({
@@ -40,7 +48,7 @@ export const MainBody = styled.header({
   alignItems: "center",
   justifyContent: "center",
   fontSize: "calc(10px + 2vmin)",
-  color: TEXT_COLOR_PRIMAL,
+  color: theme.colors.text.lmPrimary,
 });
 
 export const Linktext = styled.a({

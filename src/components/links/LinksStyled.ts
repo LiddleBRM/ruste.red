@@ -52,7 +52,7 @@ export const DetailColumnSP = styled.div({
   display: "none",
   wordBreak: "break-all",
   "@media screen and (max-width: 820px)": {
-    background: theme.colors.button.lmPrimarySelected, // これもボタンカラーみたいなの作る
+    background: theme.colors.button.lmPrimarySelected,
     color: theme.colors.text.lmSecondary,
     display: "flex",
     width: "100vw", // スマホの時は100%

@@ -2,85 +2,64 @@ import React, { useState } from "react";
 import About from "./about/About";
 import Contact from "./contact/Contact";
 import Links from "./links/Links";
-import { MainBody, NameHeader } from "./styled/Styled";
+import { MainBody, NameHeader, NameheaderDesc } from "./styled/Styled";
 import {
   ButtonArea,
   CategoryTab,
   CategoryTabSelected,
 } from "./styled/ButtonAreaStyle";
-import { ContactMeansRow, DetailColumnSP } from "./contact/ContactStyled";
+import checkQuery from "./functions/CheckQuery";
 
 function Index() {
   const [checked, setChecked] = useState(1);
-  const [acceptSpSite, setAcceptSpSite] = useState(false);
 
-  const clickExit = () => {
-    alert(
-      "いい感じになったらSNSで告知します。それまではSNSをご覧ください。misskey : @liddle@misskey.ruste.red twitter: @LiddleBRM"
-    );
-    window.location.replace("https://misskey.ruste.red/@liddle");
-  };
+  const isRustered = checkQuery();
 
   return (
     <>
       <NameHeader>Julia "Rustered" Scott</NameHeader>
-      <br />
-      <br />
-      {window.innerWidth < 820 && !acceptSpSite && (
-        <>
-          ⚠️CAUTION!!
+      <NameheaderDesc>
+        {checkQuery() ? '"The Rustered"' : 'Julia "Rustered" Scott'}. Virtual
+        Japanese Zombie : 死人憑 and Crossdresser. Merciful. Love the
+        Monstergirls and Analog Horror.
+      </NameheaderDesc>
+
+      <>
+        <ButtonArea>
           <br />
-          スマートフォン用サイトは現在調整中です。
+          {/* TODO propsで選択状況を渡すことでもう少しすっきりした記述にする */}
+          {checked == 1 && (
+            <CategoryTabSelected onClick={() => setChecked(1)}>
+              About
+            </CategoryTabSelected>
+          )}
+          {checked != 1 && (
+            <CategoryTab onClick={() => setChecked(1)}>About</CategoryTab>
+          )}
+          {checked == 2 && (
+            <CategoryTabSelected onClick={() => setChecked(2)}>
+              Links
+            </CategoryTabSelected>
+          )}
+          {checked != 2 && (
+            <CategoryTab onClick={() => setChecked(2)}>Links</CategoryTab>
+          )}
+          {checked == 3 && (
+            <CategoryTabSelected onClick={() => setChecked(3)}>
+              Contact
+            </CategoryTabSelected>
+          )}
+          {checked != 3 && (
+            <CategoryTab onClick={() => setChecked(3)}>Contact</CategoryTab>
+          )}
+        </ButtonArea>
+        <MainBody>
           <br />
-          だいぶ見づらいですが閲覧しますか？
-          <br />
-          <br />
-          <br />
-          <DetailColumnSP onClick={() => setAcceptSpSite(true)}>
-            ENTER
-          </DetailColumnSP>
-          <br />
-          <ContactMeansRow onClick={() => clickExit()}>EXIT</ContactMeansRow>
-        </>
-      )}
-      {(window.innerWidth > 820 || acceptSpSite) && (
-        <>
-          <ButtonArea>
-            <br />
-            {/* TODO styled-componentsの引数機能を用いてすっきりとした記述にする */}
-            {checked == 1 && (
-              <CategoryTabSelected onClick={() => setChecked(1)}>
-                About
-              </CategoryTabSelected>
-            )}
-            {checked != 1 && (
-              <CategoryTab onClick={() => setChecked(1)}>About</CategoryTab>
-            )}
-            {checked == 2 && (
-              <CategoryTabSelected onClick={() => setChecked(2)}>
-                Links
-              </CategoryTabSelected>
-            )}
-            {checked != 2 && (
-              <CategoryTab onClick={() => setChecked(2)}>Links</CategoryTab>
-            )}
-            {checked == 3 && (
-              <CategoryTabSelected onClick={() => setChecked(3)}>
-                Contact
-              </CategoryTabSelected>
-            )}
-            {checked != 3 && (
-              <CategoryTab onClick={() => setChecked(3)}>Contact</CategoryTab>
-            )}
-          </ButtonArea>
-          <MainBody>
-            <br />
-            {checked == 1 && <About />}
-            {checked == 2 && <Links />}
-            {checked == 3 && <Contact />}
-          </MainBody>
-        </>
-      )}
+          {checked == 1 && <About isRustered={isRustered} />}
+          {checked == 2 && <Links />}
+          {checked == 3 && <Contact />}
+        </MainBody>
+      </>
     </>
   );
 }

@@ -32,17 +32,3 @@ export const ContactData = [
 ];
 
 // NOTE 最終的にはソースではなくyamlとかで管理するようにしたい
-
-/*
-  twitter
-  blog
-  
-  Youtube
-  Twitch
-  IRIAM
-  
-  Keybase
-  Github
-  
-  Geartics
-  */

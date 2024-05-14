@@ -30,3 +30,17 @@ export const ProfileTableRowValue = styled.div({
   width: "60%",
   textAlign: "left",
 });
+
+export const DescriptionArea = styled.div({
+  display: "flex",
+  flexDirection: "column",
+  minHeight: "40px",
+  margin: "40px 0px", // TODO 親要素にgap指定する方法でやりましょうね
+  textAlign: "left",
+});
+
+export const DescriptionRow = styled.div({
+  display: "flex",
+  minHeight: "40px",
+  textAlign: "left",
+});

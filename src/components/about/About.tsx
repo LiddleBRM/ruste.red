@@ -1,6 +1,8 @@
 import React from "react";
 import {
   AboutArea,
+  DescriptionArea,
+  DescriptionRow,
   KomokuColumn,
   // ProfileColumn,
   ProfileTable,
@@ -10,9 +12,14 @@ import {
 } from "./AboutStyled";
 import { ProfileData } from "./AboutData";
 import { TagsData } from "./TagsData";
+import {
+  CensoredText,
+  IntrodoctionText,
+} from "./IntroducctionText/IntroductionText";
 
-// 基本情報
-function About() {
+const About: React.FC<{
+  isRustered: boolean;
+}> = ({ isRustered }) => {
   return (
     <>
       <AboutArea>
@@ -38,10 +45,27 @@ function About() {
               </ProfileTableRow>
             ))}
           </ProfileTable>
+          {/* TODO こんなやる気のない改行ではなくちゃんとProfileTableにgapを設定する */}
+          <br />
+          <a style={{ fontSize: "50px" }}>Introduction</a>
+          <ProfileTable>
+            <DescriptionArea>
+              {IntrodoctionText.map((desc) => (
+                <DescriptionRow>{desc}</DescriptionRow>
+              ))}
+            </DescriptionArea>
+            {isRustered && (
+              <DescriptionArea>
+                {CensoredText.map((desc) => (
+                  <DescriptionRow>{desc}</DescriptionRow>
+                ))}
+              </DescriptionArea>
+            )}
+          </ProfileTable>
         </KomokuColumn>
       </AboutArea>
     </>
   );
-}
+};
 
 export default About;
