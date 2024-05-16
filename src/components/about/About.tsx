@@ -8,6 +8,7 @@ import {
   ProfileTable,
   ProfileTableRow,
   ProfileTableRowKey,
+  ProfileTableRowLink,
   ProfileTableRowValue,
 } from "./AboutStyled";
 import { ProfileData } from "./AboutData";
@@ -30,7 +31,11 @@ const About: React.FC<{
             {ProfileData.map((row) => (
               <ProfileTableRow>
                 <ProfileTableRowKey>{row.key}</ProfileTableRowKey>
-                <ProfileTableRowValue>{row.value}</ProfileTableRowValue>
+                <ProfileTableRowValue>
+                  <ProfileTableRowLink href={row?.link}>
+                    {row.value}
+                  </ProfileTableRowLink>
+                </ProfileTableRowValue>
               </ProfileTableRow>
             ))}
           </ProfileTable>

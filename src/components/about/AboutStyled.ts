@@ -31,6 +31,14 @@ export const ProfileTableRowValue = styled.div({
   textAlign: "left",
 });
 
+export const ProfileTableRowLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+  &:visited {
+    color: inherit;
+  }
+`;
+
 export const DescriptionArea = styled.div({
   display: "flex",
   flexDirection: "column",

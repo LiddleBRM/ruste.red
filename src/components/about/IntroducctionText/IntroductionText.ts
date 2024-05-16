@@ -6,6 +6,6 @@ export const IntrodoctionText = [
 
 export const CensoredText = [
   "“Liddle Beret Marshall” lost his life on ■■■■■■■■■ ■■, ■■■■. He was attacked by a horde of ruthless monsters called ■■■■■■.",
-  'After his death, he meets a breathless man "■■ ■■", who takes over his corpse and leads a “second life”.',
+  'After his death, he meets a breathless man "■■ ■■". He gave his corpse to Liddle.',
   '■■ instructed Liddle to call the body “Julia Scott”. Liddle added to that name the middle name “Rustered”, a term he coined for “the man who was once rusted".',
 ];
